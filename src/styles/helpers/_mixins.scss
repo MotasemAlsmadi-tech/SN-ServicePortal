@@ -1,0 +1,119 @@
+@function map-get-or-key($map, $key) {
+	@if map-has-key($map, $key) or map-has-key($map, -$key) {
+		@if $key != 'auto' and type-of($key) == 'number' and $key < 0 {
+			@return 0 - map-get($map, -$key);
+		} @else {
+			@return map-get($map, $key);
+		}
+	} @else if type-of($key) == 'string' {
+		@return unquote($key);
+	} @else {
+		@return $key;
+	}
+}
+
+@function bsize($key) {
+	@return map-get-or-key($spacers, $key);
+}
+
+@mixin m($space) {
+	margin: bsize($space);
+}
+
+@mixin mt($space) {
+	margin-top: bsize($space);
+}
+
+@mixin mb($space) {
+	margin-bottom: bsize($space);
+}
+
+@mixin ml($space) {
+	margin-left: bsize($space);
+}
+
+@mixin mr($space) {
+	margin-right: bsize($space);
+}
+
+@mixin p($space) {
+	padding: bsize($space);
+}
+
+@mixin pt($space) {
+	padding-top: bsize($space);
+}
+
+@mixin pb($space) {
+	padding-bottom: bsize($space);
+}
+
+@mixin pl($space) {
+	padding-left: bsize($space);
+}
+
+@mixin pr($space) {
+	padding-right: bsize($space);
+}
+
+@mixin mx($space) {
+	@include ml($space);
+	@include mr($space);
+}
+
+@mixin my($space) {
+	@include mt($space);
+	@include mb($space);
+}
+
+@mixin px($space) {
+	@include pl($space);
+	@include pr($space);
+}
+
+@mixin py($space) {
+	@include pt($space);
+	@include pb($space);
+}
+
+
+//position Utiliies
+
+$positions: (
+  position-absolute: absolute,
+  position-relative: relative,
+  position-fixed: fixed,
+  position-static: static,
+  position-sticky: sticky,
+
+);
+@mixin position-modifiers {
+    @each $name, $val in $positions {
+        &.#{$name} {
+            position: $val; 
+        }
+    }
+  }
+
+@include position-modifiers;
+
+
+// spacing
+
+
+@mixin spacing() {
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $lengths in $spacers {
+        $length-x:   map-get($lengths, x);
+        $length-y:   map-get($lengths, y);
+
+        .#{$abbrev}-#{$size} { #{$prop}: $length-y $length-x !important; } // a = All sides
+        .#{$abbrev}t-#{$size} { #{$prop}-top:    $length-y !important; }
+        .#{$abbrev}r-#{$size} { #{$prop}-right:  $length-x !important; }
+        .#{$abbrev}b-#{$size} { #{$prop}-bottom: $length-y !important; }
+        .#{$abbrev}l-#{$size} { #{$prop}-left:   $length-x !important; }
+      }
+    }
+}
+
+@include spacing;

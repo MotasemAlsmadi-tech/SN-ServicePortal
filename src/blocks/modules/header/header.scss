@@ -1,23 +1,29 @@
-.header-wrapper{
+.header-wrapper {
     background-color: white;
 }
-.logo{
+
+.logo {
     padding: 7px 11px;
-    border-right: 0.5px solid #ccc ;
-    svg{
+    border-right: 0.5px solid #ccc;
+
+    svg {
         height: 42px;
-        width: 185px;
-        
+        max-width: 185px;
+        width: 100%;
+
     }
 }
+
 .menu-toggle {
     padding: 19px 2px;
     cursor: pointer;
 }
+
 .logo-container {
     max-width: 256px;
 }
-.search-container{
+
+.search-container {
     padding: 13px 6px;
 }
 
@@ -26,3 +32,30 @@
         padding: 5px;
     }
 }
+
+.main-search {
+    .main-search__input {
+        height: 37px;
+    }
+    .main-search__button {
+        right: 5px;
+        top: 5px;
+        border: 0;
+    }
+}
+// .row{
+//     -ms-flex-preferred-size: 0;
+//     flex-basis: 0;
+//     -webkit-box-flex: 1;
+//     -ms-flex-positive: 1;
+//     flex-grow: 1;
+//     max-width: 100%;
+// }
+// .col {
+//     -ms-flex-preferred-size: 0;
+//     flex-basis: 0;
+//     -webkit-box-flex: 1;
+//     -ms-flex-positive: 1;
+//     flex-grow: 1;
+//     max-width: 100%;
+// }
