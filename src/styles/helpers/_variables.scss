@@ -6,7 +6,8 @@ $color-body-text: $color-gray;
 $color-boxed-card-title: $color-secondary;
 $color-border-top-card-title: $color-primary;
 $color-link: $color-primary;
-
+$header-icon-color:#c5c6cb;
+$header-icon-hover-color:darken($header-icon-color,50%);
 //font
 $font-family: "din-2014", sans-serif;
 $font-bold-wight:600; 

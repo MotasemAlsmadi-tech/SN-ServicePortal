@@ -68,6 +68,7 @@
         "yargs": "^13.2.4"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.13.0",
         "cosmiconfig": "^6.0.0",
         "jquery.2": "^1.0.0",
         "smart-grid": "^2.1.2"
