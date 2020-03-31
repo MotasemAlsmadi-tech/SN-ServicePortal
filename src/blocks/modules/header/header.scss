@@ -1,3 +1,28 @@
 .header-wrapper{
     background-color: white;
 }
+.logo{
+    padding: 7px 11px;
+    border-right: 0.5px solid #ccc ;
+    svg{
+        height: 42px;
+        width: 185px;
+        
+    }
+}
+.menu-toggle {
+    padding: 19px 2px;
+    cursor: pointer;
+}
+.logo-container {
+    max-width: 256px;
+}
+.search-container{
+    padding: 13px 6px;
+}
+
+.user-profile {
+    .user-profile__img {
+        padding: 5px;
+    }
+}
