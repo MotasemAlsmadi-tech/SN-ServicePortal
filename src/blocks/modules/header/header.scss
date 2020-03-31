@@ -1,5 +1,6 @@
 .header-wrapper {
     background-color: white;
+    box-shadow: 0 -2px 30px rgba($color-primary, 0.21);
 }
 
 .logo {
@@ -28,6 +29,7 @@
 }
 
 .user-profile {
+    min-width: 200px;
     .user-profile__img {
         padding: 5px;
     }
@@ -43,6 +45,7 @@
         border: 0;
     }
 }
+
 // .row{
 //     -ms-flex-preferred-size: 0;
 //     flex-basis: 0;
