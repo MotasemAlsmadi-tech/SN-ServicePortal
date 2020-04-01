@@ -1,6 +1,7 @@
 .header-wrapper {
     background-color: white;
     box-shadow: 0 -2px 30px rgba($color-primary, 0.21);
+    position: sticky;
 }
 
 .logo {
@@ -9,7 +10,7 @@
 
     svg {
         height: 42px;
-        max-width: 185px;
+        max-width: $logo-width;
         width: 100%;
 
     }

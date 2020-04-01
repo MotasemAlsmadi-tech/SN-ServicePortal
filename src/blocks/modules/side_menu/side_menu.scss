@@ -1,0 +1,20 @@
+.main-sidebar {
+    height: calc(100vh - 61px);
+    width: $sidebar-width;
+    background: linear-gradient($color-secondary, $color-primary) ;
+    position: fixed;
+    top: 61px;
+    overflow-y: auto;
+}
+.nav-bg{
+    background: url("../../../img/nav-bg.png");
+    height: calc(100vh - 61px);
+    background-position: top left;
+    background-size: cover;
+}
+.nav-link[data-toggle].collapsed:before {
+    content: " ▾";
+}
+.nav-link[data-toggle]:not(.collapsed):before {
+    content: " ▴";
+}
