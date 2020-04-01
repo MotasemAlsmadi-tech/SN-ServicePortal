@@ -5,29 +5,46 @@
 }
 
 .logo {
-    padding: 7px 11px;
+  padding: 10px 22px;
+  height: 61px;
     border-right: 0.5px solid #ccc;
-
-    svg {
+    span.logo-mini {
+        display: none;
+       img{
+        height: 42px;
+        max-width: $logo-width-mini;
+        width: 100%;
+       }
+    }
+  
+    span.logo-lg {
+      img{
         height: 42px;
         max-width: $logo-width;
         width: 100%;
+      }
+       
+        
+        display: block;
 
     }
 }
 
 .menu-toggle {
-    padding: 19px 2px;
+  padding: 20px;
+    border: 0;
     cursor: pointer;
+    border-radius: 0;
 }
 
 .logo-container {
     max-width: 256px;
 }
-
-.search-container {
-    padding: 12px 6px;
+.main-search{
+  margin: 12px;
 }
+
+
 
 .user-profile {
     min-width: 200px;
@@ -101,19 +118,5 @@ span.badge{
     }
 }
 
-// .row{
-//     -ms-flex-preferred-size: 0;
-//     flex-basis: 0;
-//     -webkit-box-flex: 1;
-//     -ms-flex-positive: 1;
-//     flex-grow: 1;
-//     max-width: 100%;
-// }
-// .col {
-//     -ms-flex-preferred-size: 0;
-//     flex-basis: 0;
-//     -webkit-box-flex: 1;
-//     -ms-flex-positive: 1;
-//     flex-grow: 1;
-//     max-width: 100%;
-// }
+
+
