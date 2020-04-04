@@ -5,8 +5,10 @@
 }
 
 .logo {
-  padding: 10px 22px;
+  @include transition(width $transition-speed $transition-fn);
+  padding: 10px 0;
   height: 61px;
+ width: $logo-width;
     border-right: 0.5px solid #ccc;
     span.logo-mini {
         display: none;
@@ -88,34 +90,38 @@
 
     a {
         display: inline-block;
-        padding: 13px 6px;
+        padding: 16px 6px;
         position: relative;
-span.badge{
-    width: 23px;
-    height: 23px;
-    line-height: 17px;
-    right: -3px;
-    top: 7px;
-    border: 2px solid #FFE;
-    font-size: 11px;
-    border-radius: 50%;
-    font-weight: 400;
-   background-color: $color-primary;
-}
-        svg {
-            height: 30px;
-
-            path {
-                fill: $header-icon-color;
-            }
+        
+        text-decoration: none;
+        span.badge{
+            width: 23px;
+            height: 23px;
+            line-height: 17px;
+            right: -3px;
+            top: 7px;
+            border: 2px solid #FFE;
+            font-size: 11px;
+            border-radius: 50%;
+            font-weight: 400;
+        background-color: $color-primary;
         }
-
-        &:hover {
-            path {
-                fill: darken($header-icon-color, 10%);
-            }
+        i {
+          font-size: 25px;
+          &:before{
+            color: $header-icon-color;
+          }
+        }
+        
+          &:hover {
+            i {
+         &:before{
+            color: darken($header-icon-color, 10%);
         }
     }
+          }
+        
+    }   
 }
 
 
